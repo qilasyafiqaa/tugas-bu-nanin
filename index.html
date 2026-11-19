@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Form pendaftaran anggota baru ekstrakurikuler sekolah.">
+  <title>Pendaftaran Ekstrakurikuler</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="page-wrapper">
+    <section class="register-card">
+      <div class="card-heading">
+        <div class="brand-icon" aria-hidden="true">✦</div>
+        <p class="eyebrow">PENERIMAAN ANGGOTA BARU</p>
+        <h1>Gabung Ekstrakurikuler</h1>
+        <p class="subtitle">Kembangkan minat dan bakatmu bersama kami. Lengkapi formulir di bawah ini!</p>
+      </div>
+
+      <form id="registrationForm" novalidate>
+        <div class="form-group">
+          <label for="fullName">Nama Lengkap</label>
+          <input type="text" id="fullName" name="fullName" placeholder="Masukkan nama lengkap" autocomplete="name">
+          <small class="error-message" id="fullNameError"></small>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="nama@email.com" autocomplete="email">
+          <small class="error-message" id="emailError"></small>
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" placeholder="Minimal 8 karakter" autocomplete="new-password">
+          <small class="error-message" id="passwordError"></small>
+        </div>
+
+        <div class="form-group">
+          <label for="confirmPassword">Konfirmasi Password</label>
+          <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Masukkan ulang password" autocomplete="new-password">
+          <small class="error-message" id="confirmPasswordError"></small>
+        </div>
+
+        <div class="form-group">
+          <label for="extracurricular">Pilihan Ekstrakurikuler</label>
+          <select id="extracurricular" name="extracurricular">
+            <option value="">Pilih ekstrakurikuler</option>
+            <option value="Pramuka">Pramuka</option>
+            <option value="PMR">PMR</option>
+            <option value="Paskibra">Paskibra</option>
+            <option value="Basket">Basket</option>
+            <option value="Futsal">Futsal</option>
+            <option value="Voli">Voli</option>
+            <option value="Karya Ilmiah Remaja">Karya Ilmiah Remaja</option>
+            <option value="Seni Tari">Seni Tari</option>
+            <option value="Musik">Musik</option>
+          </select>
+          <small class="error-message" id="extracurricularError"></small>
+        </div>
+
+        <button type="submit" class="submit-button">Daftar Sekarang <span aria-hidden="true">→</span></button>
+        <p class="success-message" id="successMessage" role="status" aria-live="polite"></p>
+      </form>
+
+      <p class="footer-note">Pastikan data yang kamu masukkan sudah benar.</p>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
